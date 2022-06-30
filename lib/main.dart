@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: SafeArea(
-          child: Onboarding(),
+          child: Onboarding(
+            screen: OnboardingScreen.first,
+          ),
         ),
       ),
     );

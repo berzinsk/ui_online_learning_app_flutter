@@ -2,8 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../constants/constants.dart' as constants;
 
+enum OnboardingScreen {
+  first,
+  second,
+  third,
+}
+
 class Onboarding extends StatelessWidget {
-  const Onboarding({Key? key}) : super(key: key);
+  final OnboardingScreen screen;
+  const Onboarding({
+    Key? key,
+    required this.screen,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +23,73 @@ class Onboarding extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Image(
-            image: AssetImage('asset/images/onboarding_1.png'),
+          Image(
+            image: getImage(screen),
           ),
           Text(
-            'Learn from expert',
+            getTitle(screen),
             style: constants.kDisplaySmBold,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 16),
             child: Text(
-              'Get Access to the best course from professional',
+              getDescription(screen),
               style: constants.kTextSemiBold,
             ),
           ),
         ],
       ),
     );
-    ;
+  }
+
+  AssetImage getImage(OnboardingScreen screen) {
+    switch (screen) {
+      case OnboardingScreen.first:
+        {
+          return const AssetImage('asset/images/onboarding_1.png');
+        }
+      case OnboardingScreen.second:
+        {
+          return const AssetImage('asset/images/onboarding_2.png');
+        }
+      case OnboardingScreen.third:
+        {
+          return const AssetImage('asset/images/onboarding_3.png');
+        }
+    }
+  }
+
+  String getTitle(OnboardingScreen screen) {
+    switch (screen) {
+      case OnboardingScreen.first:
+        {
+          return 'Learn from expert';
+        }
+      case OnboardingScreen.second:
+        {
+          return 'Anytime, Anywhere';
+        }
+      case OnboardingScreen.third:
+        {
+          return 'Explore New Skills';
+        }
+    }
+  }
+
+  String getDescription(OnboardingScreen screen) {
+    switch (screen) {
+      case OnboardingScreen.first:
+        {
+          return 'Get Access to the best course from professional';
+        }
+      case OnboardingScreen.second:
+        {
+          return 'Learn With Pleasure With Us, Wherever You Are!';
+        }
+      case OnboardingScreen.third:
+        {
+          return 'Make your life easier and keep your skill up';
+        }
+    }
   }
 }
