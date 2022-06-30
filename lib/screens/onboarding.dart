@@ -31,10 +31,26 @@ class Onboarding extends StatelessWidget {
             style: constants.kDisplaySmBold,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 16),
+            padding: const EdgeInsets.only(top: 16, bottom: 20),
             child: Text(
               getDescription(screen),
               style: constants.kTextSemiBold,
+            ),
+          ),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              splashFactory: NoSplash.splashFactory,
+              minimumSize: Size.zero,
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+              backgroundColor: constants.kBranchColorPrimary,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
+            child: Text(
+              'Get Started',
+              style: constants.kTextButtonPrimary,
             ),
           ),
         ],

@@ -13,7 +13,16 @@ var kDisplaySmBold = GoogleFonts.inter(
 
 var kTextSemiBold = GoogleFonts.inter(
   textStyle: const TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w500,
-      color: app_colors.kNeutralColor500),
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: app_colors.kNeutralColor500,
+  ),
+);
+
+var kTextButtonPrimary = GoogleFonts.inter(
+  textStyle: const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: app_colors.kTextColorNeutral50,
+  ),
 );
