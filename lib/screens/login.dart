@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../resources/constants/constants.dart' as constants;
+import '../resources/constants/text_styles.dart';
+import '../resources/constants/colors.dart';
 import '../resources/extensions/text_style.dart';
 
 class Login extends StatelessWidget {
@@ -15,7 +16,7 @@ class Login extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Learn Everywhere and Anytime',
-              style: constants.kTextSemiBold18),
+              style: TextStyles.kTextSemiBold18),
           Padding(
             padding: const EdgeInsets.only(top: 16, bottom: 20),
             child: Row(
@@ -23,14 +24,14 @@ class Login extends StatelessWidget {
               children: [
                 Text(
                   'Sign in to your account',
-                  style: constants.kTextXsSemiBold,
+                  style: TextStyles.kTextXsSemiBold,
                 ),
                 TextButton(
                   onPressed: () {},
                   child: Text(
                     'Forgot?',
-                    style: constants.kTextSemiBold14
-                        .withColor(constants.kBranchColorPrimary),
+                    style: TextStyles.textSemiBold
+                        .withColor(AppColors.kBranchColorPrimary),
                   ),
                 ),
               ],

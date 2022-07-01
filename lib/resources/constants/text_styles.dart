@@ -1,44 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'colors.dart' as app_colors;
+import 'colors.dart';
 
-var kDisplaySmBold30 = GoogleFonts.inter(
-  textStyle: const TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeight.bold,
-    color: app_colors.kBrandColorAccentBlack,
-  ),
-);
+class TextStyles {
+  static TextStyle textSemiBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kNeutralColor500,
+    ),
+  );
 
-var kTextSemiBold14 = GoogleFonts.inter(
-  textStyle: const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    color: app_colors.kNeutralColor500,
-  ),
-);
+  static TextStyle kDisplaySmBold30 = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.bold,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
 
-var kTextSemiBold18 = GoogleFonts.inter(
-  textStyle: const TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w500,
-    color: app_colors.kBrandColorAccentBlack,
-  ),
-);
+  static TextStyle kTextSemiBold14 = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kNeutralColor500,
+    ),
+  );
 
-var kTextXsSemiBold = GoogleFonts.inter(
-  textStyle: const TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeight.bold,
-    color: app_colors.kBrandColorAccentBlack,
-  ),
-);
+  static TextStyle kTextSemiBold18 = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
 
-var kTextButtonPrimary = GoogleFonts.inter(
-  textStyle: const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    color: app_colors.kTextColorNeutral50,
-  ),
-);
+  static TextStyle kTextXsSemiBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
+
+  static TextStyle kTextButtonPrimary = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kTextColorNeutral50,
+    ),
+  );
+}

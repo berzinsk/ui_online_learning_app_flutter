@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../resources/constants/constants.dart' as constants;
+import '../resources/constants/colors.dart';
+import '../resources/constants/text_styles.dart';
 
 enum OnboardingScreen {
   first,
@@ -28,13 +29,13 @@ class Onboarding extends StatelessWidget {
           ),
           Text(
             getTitle(screen),
-            style: constants.kDisplaySmBold30,
+            style: TextStyles.kDisplaySmBold30,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 16, bottom: 20),
             child: Text(
               getDescription(screen),
-              style: constants.kDisplaySmBold30,
+              style: TextStyles.kDisplaySmBold30,
             ),
           ),
           OutlinedButton(
@@ -43,14 +44,14 @@ class Onboarding extends StatelessWidget {
               splashFactory: NoSplash.splashFactory,
               minimumSize: Size.zero,
               padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
-              backgroundColor: constants.kBranchColorPrimary,
+              backgroundColor: AppColors.kBranchColorPrimary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
             child: Text(
               'Get Started',
-              style: constants.kTextButtonPrimary,
+              style: TextStyles.kTextButtonPrimary,
             ),
           ),
         ],
