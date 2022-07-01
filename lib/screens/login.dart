@@ -27,6 +27,9 @@ class Login extends StatelessWidget {
                   style: TextStyles.kTextXsSemiBold,
                 ),
                 TextButton(
+                  style: ButtonStyle(
+                    overlayColor: MaterialStateProperty.all(Colors.transparent),
+                  ),
                   onPressed: () {},
                   child: Text(
                     'Forgot?',
@@ -37,15 +40,58 @@ class Login extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            color: Colors.yellow,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Username'),
-                Text('Password'),
-              ],
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(16)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 0,
+                    blurRadius: 20,
+                    offset: const Offset(0, 6),
+                  )
+                ],
+              ),
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Username',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 1,
+                  ),
+                  TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: 'Password',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        ),
+                      ),
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           OutlinedButton(
