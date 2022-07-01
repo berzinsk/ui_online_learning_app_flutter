@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/constants.dart' as constants;
+import '../resources/constants/constants.dart' as constants;
 
 enum OnboardingScreen {
   first,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants/constants.dart' as constants;
+import '../resources/constants/constants.dart' as constants;
+import '../resources/extensions/text_style.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -26,7 +27,11 @@ class Login extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Forgot?'),
+                  child: Text(
+                    'Forgot?',
+                    style: constants.kTextSemiBold14
+                        .withColor(constants.kBranchColorPrimary),
+                  ),
                 ),
               ],
             ),
