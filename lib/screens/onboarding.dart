@@ -28,13 +28,13 @@ class Onboarding extends StatelessWidget {
           ),
           Text(
             getTitle(screen),
-            style: constants.kDisplaySmBold,
+            style: constants.kDisplaySmBold30,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 16, bottom: 20),
             child: Text(
               getDescription(screen),
-              style: constants.kTextSemiBold,
+              style: constants.kDisplaySmBold30,
             ),
           ),
           OutlinedButton(
