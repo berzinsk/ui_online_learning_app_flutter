@@ -34,14 +34,14 @@ class Login extends StatelessWidget {
                   child: Text(
                     'Forgot?',
                     style: TextStyles.textSemiBold
-                        .withColor(AppColors.kBranchColorPrimary),
+                        .withColor(AppColors.kBrandColorPrimary),
                   ),
                 ),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 16),
+            padding: const EdgeInsets.only(bottom: 20),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(16)),
@@ -97,16 +97,46 @@ class Login extends StatelessWidget {
           OutlinedButton(
             onPressed: () {},
             style: OutlinedButton.styleFrom(
-              minimumSize: Size(double.infinity, 56),
+              minimumSize: const Size(double.infinity, 56),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              backgroundColor: AppColors.kBrandColorPrimary,
+              splashFactory: NoSplash.splashFactory,
             ),
-            child: Text('Sign In'),
+            child: Text(
+              'Sign In',
+              style: TextStyles.kTextSmSemiBold,
+            ),
           ),
-          OutlinedButton(
-            onPressed: () {},
-            style: OutlinedButton.styleFrom(
-              minimumSize: Size(double.infinity, 56),
+          Padding(
+            padding: const EdgeInsets.only(top: 16),
+            child: OutlinedButton(
+              onPressed: () {},
+              style: OutlinedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 56),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                splashFactory: NoSplash.splashFactory,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Image(
+                    image: AssetImage('asset/images/icon_google.png'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8),
+                    child: Text(
+                      'Sign In With Google',
+                      style: TextStyles.kTextSmSemiBold
+                          .withColor(AppColors.kBrandColorAccentBlack),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            child: Text('Sign In With Google'),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -44,7 +44,7 @@ class Onboarding extends StatelessWidget {
               splashFactory: NoSplash.splashFactory,
               minimumSize: Size.zero,
               padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
-              backgroundColor: AppColors.kBranchColorPrimary,
+              backgroundColor: AppColors.kBrandColorPrimary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),

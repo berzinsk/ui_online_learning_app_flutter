@@ -51,4 +51,12 @@ class TextStyles {
       color: AppColors.kTextColorNeutral50,
     ),
   );
+
+  static TextStyle kTextSmSemiBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kTextColorNeutral50,
+    ),
+  );
 }
