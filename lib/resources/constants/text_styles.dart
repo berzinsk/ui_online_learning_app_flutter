@@ -59,4 +59,12 @@ class TextStyles {
       color: AppColors.kTextColorNeutral50,
     ),
   );
+
+  static TextStyle kTextSmRegular = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
 }

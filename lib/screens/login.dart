@@ -15,6 +15,7 @@ class Login extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.23),
           Text('Learn Everywhere and Anytime',
               style: TextStyles.kTextSemiBold18),
           Padding(
@@ -138,12 +139,27 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Don\'t have an account?'),
-              Text('Sign Up'),
-            ],
+          Expanded(
+            child: Align(
+              alignment: FractionalOffset.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: Text(
+                      'Don\'t have an account?',
+                      style: TextStyles.kTextSmRegular,
+                    ),
+                  ),
+                  Text(
+                    'Sign Up',
+                    style: TextStyles.textSemiBold
+                        .withColor(AppColors.kBrandColorPrimary),
+                  ),
+                ],
+              ),
+            ),
           )
         ],
       ),
