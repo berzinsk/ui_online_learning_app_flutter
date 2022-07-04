@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screens/onboarding.dart';
-import './screens/login.dart';
+import './screens/registration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: SafeArea(
-          child: Login(),
+          child: Registration(),
         ),
       ),
     );
