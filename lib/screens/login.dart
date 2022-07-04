@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../resources/constants/text_styles.dart';
 import '../resources/constants/colors.dart';
 import '../resources/extensions/text_style.dart';
+import '../components/primary_button.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -95,20 +96,9 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          OutlinedButton(
-            onPressed: () {},
-            style: OutlinedButton.styleFrom(
-              minimumSize: const Size(double.infinity, 56),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              backgroundColor: AppColors.kBrandColorPrimary,
-              splashFactory: NoSplash.splashFactory,
-            ),
-            child: Text(
-              'Sign In',
-              style: TextStyles.kTextSmSemiBold,
-            ),
+          PrimaryButton(
+            title: 'Sign In',
+            onClick: () {},
           ),
           Padding(
             padding: const EdgeInsets.only(top: 16),

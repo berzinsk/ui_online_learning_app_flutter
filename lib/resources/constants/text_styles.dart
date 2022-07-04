@@ -63,7 +63,15 @@ class TextStyles {
   static TextStyle kTextSmRegular = GoogleFonts.inter(
     textStyle: TextStyle(
       fontSize: 14,
+      height: 1.5,
       fontWeight: FontWeight.normal,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
+  static TextStyle kDisplayXsBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.bold,
       color: AppColors.kBrandColorAccentBlack,
     ),
   );
