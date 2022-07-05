@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screens/account_verification.dart';
+import './screens/success_message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,12 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: SafeArea(
-          child: AccountVerification(),
+          child: SuccessMessage(
+            title: 'Verification Complete',
+            text:
+                'You successfully created an account.\nLet\'s take the course.',
+            showRegisterLink: true,
+          ),
         ),
       ),
     );

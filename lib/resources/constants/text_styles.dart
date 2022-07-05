@@ -12,7 +12,7 @@ class TextStyles {
     ),
   );
 
-  static TextStyle kDisplaySmBold30 = GoogleFonts.inter(
+  static TextStyle kDisplaySmBold = GoogleFonts.inter(
     textStyle: TextStyle(
       fontSize: 30,
       fontWeight: FontWeight.bold,
