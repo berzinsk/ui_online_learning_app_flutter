@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screens/registration.dart';
+import './screens/account_verification.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: SafeArea(
-          child: Registration(),
+          child: AccountVerification(),
         ),
       ),
     );
