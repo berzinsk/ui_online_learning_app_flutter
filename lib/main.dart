@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screens/forgot_password.dart';
+import './screens/sign_up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: SafeArea(
-          child: ForgotPassword(),
+          child: SignUp(),
         ),
       ),
     );
