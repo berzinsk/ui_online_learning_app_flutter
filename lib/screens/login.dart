@@ -4,6 +4,7 @@ import '../resources/constants/text_styles.dart';
 import '../resources/constants/colors.dart';
 import '../resources/extensions/text_style.dart';
 import '../components/primary_button.dart';
+import '../components/input_field.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -60,37 +61,23 @@ class Login extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Username',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                        ),
-                      ),
-                      filled: true,
-                      fillColor: Colors.white,
+                  InputField(
+                    hintText: 'Username',
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
                     ),
                   ),
                   SizedBox(
                     height: 1,
                   ),
-                  TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: 'Password',
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                        ),
-                      ),
-                      filled: true,
-                      fillColor: Colors.white,
+                  InputField(
+                    hintText: 'Password',
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
                     ),
+                    obscureText: true,
                   ),
                 ],
               ),

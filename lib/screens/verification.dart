@@ -4,6 +4,7 @@ import '../resources/constants/colors.dart';
 import '../resources/constants/text_styles.dart';
 import '../resources/extensions/text_style.dart';
 import '../components/primary_button.dart';
+import '../components/input_field.dart';
 
 class Registration extends StatelessWidget {
   const Registration({Key? key}) : super(key: key);
@@ -42,18 +43,9 @@ class Registration extends StatelessWidget {
                       offset: const Offset(0, 6),
                     ),
                   ]),
-              child: const TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: 'Mobile number',
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(16),
-                    ),
-                  ),
-                ),
+              child: InputField(
+                hintText: 'Mobile number',
+                borderRadius: BorderRadius.circular(16),
               ),
             ),
           ),

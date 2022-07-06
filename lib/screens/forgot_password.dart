@@ -4,6 +4,7 @@ import '../resources/constants/colors.dart';
 import '../resources/constants/text_styles.dart';
 import '../resources/extensions/text_style.dart';
 import '../components/primary_button.dart';
+import '../components/input_field.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -43,17 +44,9 @@ class ForgotPassword extends StatelessWidget {
                         offset: const Offset(0, 6),
                       ),
                     ]),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    hintStyle: TextStyles.kTextXsRegular,
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(16),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
+                child: InputField(
+                  hintText: 'Email',
+                  borderRadius: BorderRadius.circular(16),
                 ),
               ),
             ),
