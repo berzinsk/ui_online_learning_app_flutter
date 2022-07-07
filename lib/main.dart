@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screens/dashboard.dart';
+import 'screens/dashboard/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
