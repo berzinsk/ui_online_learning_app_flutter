@@ -54,6 +54,22 @@ class DashboardHeader extends StatelessWidget {
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8, bottom: 32),
+              child: RichText(
+                text: TextSpan(
+                  text: 'Find the best ',
+                  style: TextStyles.kTextMdMedium,
+                  children: [
+                    TextSpan(text: 'Courses', style: TextStyles.kTextMdBold),
+                    TextSpan(
+                      text: ' to learn here!',
+                      style: TextStyles.kTextMdMedium,
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

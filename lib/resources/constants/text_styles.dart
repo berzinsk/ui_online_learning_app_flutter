@@ -84,4 +84,20 @@ class TextStyles {
       color: AppColors.kNeutralRegular400,
     ),
   );
+
+  static TextStyle kTextMdMedium = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+      color: AppColors.kTextColorNeutral50,
+    ),
+  );
+
+  static TextStyle kTextMdBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      color: AppColors.kTextColorNeutral50,
+    ),
+  );
 }
