@@ -8,4 +8,6 @@ class AppColors {
   static Color kNeutralColor300 = const Color(0xffd0d5dd);
   static Color kSemanticSuccess500 = const Color(0xff38bc41);
   static Color kNeutralRegular400 = const Color(0xff98a2b3);
+  static Color kBrandColorDark = const Color(0xff5564de);
+  static Color kBrandLight = const Color(0xff5ec3f4);
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screens/new_password.dart';
+import './screens/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: SafeArea(
-          child: NewPassword(),
-        ),
+        body: Dashboard(),
       ),
     );
   }
