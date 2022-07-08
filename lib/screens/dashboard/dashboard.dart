@@ -8,13 +8,17 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        DashboardHeader(),
-        FeaturedSection(),
-      ],
+    return Container(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            DashboardHeader(),
+            FeaturedSection(),
+          ],
+        ),
+      ),
     );
   }
 }
