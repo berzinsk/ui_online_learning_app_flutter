@@ -100,4 +100,20 @@ class TextStyles {
       color: AppColors.kTextColorNeutral50,
     ),
   );
+
+  static TextStyle kTextXlSemiBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
+
+  static TextStyle kTextSmMedium = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      color: AppColors.kBrandColorPrimary,
+    ),
+  );
 }
