@@ -116,4 +116,12 @@ class TextStyles {
       color: AppColors.kBrandColorPrimary,
     ),
   );
+
+  static TextStyle kTextBold18 = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+      color: AppColors.kTextColorNeutral50,
+    ),
+  );
 }
