@@ -4,6 +4,7 @@ import '../../../resources/constants/text_styles.dart';
 import '../../../resources/constants/colors.dart';
 import '../../../resources/extensions/text_style.dart';
 import './dashboard_header_button.dart';
+import './dashboard_header_search.dart';
 
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({
@@ -70,6 +71,7 @@ class DashboardHeader extends StatelessWidget {
                 ),
               ),
             ),
+            const DashboardHeaderSearch(),
           ],
         ),
       ),
