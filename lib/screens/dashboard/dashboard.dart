@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './components/dashboard_header.dart';
 import './components/featured_section.dart';
 import './components/trending_section.dart';
+import '../../components/bottom_navbar.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class Dashboard extends StatelessWidget {
             DashboardHeader(),
             FeaturedSection(),
             TrendingSection(),
+            BottomNavbar(),
           ],
         ),
       ),
