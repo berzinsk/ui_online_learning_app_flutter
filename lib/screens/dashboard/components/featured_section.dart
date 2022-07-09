@@ -15,24 +15,27 @@ class FeaturedSection extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Featured',
-                style: TextStyles.kTextXlSemiBold,
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  splashFactory: NoSplash.splashFactory,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Featured',
+                  style: TextStyles.kTextXlSemiBold,
                 ),
-                onPressed: () {},
-                child: Text(
-                  'See all',
-                  style: TextStyles.kTextSmMedium,
+                TextButton(
+                  style: TextButton.styleFrom(
+                    splashFactory: NoSplash.splashFactory,
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    'See all',
+                    style: TextStyles.kTextSmMedium,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -103,8 +106,6 @@ class FeaturedSection extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Image(
-                                  // width: 32,
-                                  // height: 32,
                                   image: AssetImage(
                                       'asset/images/icon_star_filled.png'),
                                 ),
