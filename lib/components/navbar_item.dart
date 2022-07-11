@@ -20,10 +20,20 @@ class NavbarItem extends StatelessWidget {
     this.hasColoredIcon = false,
   }) : super(key: key);
 
+  Color? iconColor() {
+    if (hasColoredIcon) {
+      return null;
+    } else if (isActive) {
+      return AppColors.kBrandColorPrimary;
+    }
+
+    return AppColors.kNeutralRegular400;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 16, right: isLastItem ? 0 : 16),
+      padding: EdgeInsets.only(top: 16, right: isLastItem ? 0 : 32),
       child: TextButton(
         style: TextButton.styleFrom(
           minimumSize: Size.zero,
@@ -36,7 +46,7 @@ class NavbarItem extends StatelessWidget {
           children: [
             Image(
               image: AssetImage('asset/images/icon_navbar_$iconName.png'),
-              color: hasColoredIcon ? null : AppColors.kNeutralRegular400,
+              color: iconColor(),
             ),
             if (isActive)
               Padding(

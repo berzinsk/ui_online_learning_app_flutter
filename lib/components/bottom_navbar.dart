@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../resources/constants/colors.dart';
-import '../resources/constants/text_styles.dart';
-import '../resources/extensions/text_style.dart';
 import './navbar_item.dart';
 
 class BottomNavbar extends StatelessWidget {
