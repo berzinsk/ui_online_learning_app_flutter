@@ -24,23 +24,31 @@ class NavbarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 16, right: isLastItem ? 0 : 16),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-            image: AssetImage('asset/images/icon_navbar_$iconName.png'),
-            color: hasColoredIcon ? null : AppColors.kNeutralRegular400,
-          ),
-          if (isActive)
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Text(
-                title,
-                style: TextStyles.kTextXsRegular
-                    .withColor(AppColors.kBrandColorAccentBlack),
-              ),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          minimumSize: Size.zero,
+          padding: EdgeInsets.zero,
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        ),
+        onPressed: () {},
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: AssetImage('asset/images/icon_navbar_$iconName.png'),
+              color: hasColoredIcon ? null : AppColors.kNeutralRegular400,
             ),
-        ],
+            if (isActive)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(
+                  title,
+                  style: TextStyles.kTextXsRegular
+                      .withColor(AppColors.kBrandColorAccentBlack),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

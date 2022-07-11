@@ -14,7 +14,7 @@ class BottomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 100,
+      height: 102,
       decoration: const BoxDecoration(
         color: Colors.blueAccent,
         borderRadius: BorderRadius.only(
