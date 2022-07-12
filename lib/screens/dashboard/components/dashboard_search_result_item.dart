@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../../../model/search_result.dart';
+
 import '../../../resources/constants/colors.dart';
 import '../../../resources/constants/text_styles.dart';
 import '../../../resources/extensions/text_style.dart';
 import './search_result_tag.dart';
 
 class DashboardSearchResultItem extends StatelessWidget {
+  final SearchResult searchResult;
+
   const DashboardSearchResultItem({
     Key? key,
+    required this.searchResult,
   }) : super(key: key);
 
   @override
@@ -42,8 +47,7 @@ class DashboardSearchResultItem extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.368,
                 height: 152,
                 fit: BoxFit.fitHeight,
-                image:
-                    const AssetImage('asset/images/search_result_image_0.png'),
+                image: AssetImage('asset/images/${searchResult.image}.png'),
               ),
             ),
             Expanded(
@@ -57,8 +61,8 @@ class DashboardSearchResultItem extends StatelessWidget {
                     SizedBox(
                       width: 152,
                       child: Text(
+                        searchResult.name,
                         maxLines: 2,
-                        'UX/UI Design Course 2022',
                         style: TextStyles.kTextSmMedium.withColor(
                           AppColors.kBrandColorAccentBlack,
                         ),
@@ -69,13 +73,13 @@ class DashboardSearchResultItem extends StatelessWidget {
                       children: [
                         SearchResultTag(
                           child: Text(
-                            'Maja Indira',
+                            searchResult.author,
                             style: TextStyles.kTextXsRegular
                                 .withColor(AppColors.kBrandColorAccentBlack),
                           ),
                         ),
                         Text(
-                          '\$49',
+                          '\$${searchResult.price}',
                           style: TextStyles.kDisplaySmMedium,
                         ),
                       ],
@@ -87,7 +91,7 @@ class DashboardSearchResultItem extends StatelessWidget {
                           child: Row(
                             children: [
                               Text(
-                                '4.6',
+                                '${searchResult.rating}',
                                 style: TextStyles.kTextXsBold
                                     .withColor(AppColors.kSemanticDanger400),
                               ),
@@ -99,21 +103,22 @@ class DashboardSearchResultItem extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                '2349',
+                                '${searchResult.reviews}',
                                 style: TextStyles.kTextXsRegular.withColor(
                                     AppColors.kBrandColorAccentBlack),
                               ),
                             ],
                           ),
                         ),
-                        SearchResultTag(
-                          shouldHighlight: true,
-                          child: Text(
-                            'Best Seller',
-                            style: TextStyles.kTextXsRegular
-                                .withColor(AppColors.kBrandColorAccentBlack),
+                        if (searchResult.isBestSeller)
+                          SearchResultTag(
+                            shouldHighlight: true,
+                            child: Text(
+                              'Best Seller',
+                              style: TextStyles.kTextXsRegular
+                                  .withColor(AppColors.kBrandColorAccentBlack),
+                            ),
                           ),
-                        ),
                       ],
                     )
                   ],
