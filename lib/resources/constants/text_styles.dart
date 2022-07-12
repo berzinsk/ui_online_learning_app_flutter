@@ -109,6 +109,14 @@ class TextStyles {
     ),
   );
 
+  static TextStyle kTextXlRegular = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.normal,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
+
   static TextStyle kTextSmMedium = GoogleFonts.inter(
     textStyle: TextStyle(
       fontSize: 14,
