@@ -4,9 +4,12 @@ import '../../../resources/constants/colors.dart';
 
 class SearchResultTag extends StatelessWidget {
   final Widget child;
+  final bool shouldHighlight;
+
   const SearchResultTag({
     Key? key,
     required this.child,
+    this.shouldHighlight = false,
   }) : super(key: key);
 
   @override
@@ -14,7 +17,9 @@ class SearchResultTag extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: AppColors.kNeutralColor200,
+        color: shouldHighlight
+            ? AppColors.kSemanticWarning200
+            : AppColors.kNeutralColor200,
         borderRadius: BorderRadius.circular(16),
       ),
       child: child,

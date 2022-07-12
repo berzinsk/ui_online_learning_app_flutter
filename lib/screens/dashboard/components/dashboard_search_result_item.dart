@@ -81,6 +81,7 @@ class DashboardSearchResultItem extends StatelessWidget {
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SearchResultTag(
                           child: Row(
@@ -103,6 +104,14 @@ class DashboardSearchResultItem extends StatelessWidget {
                                     AppColors.kBrandColorAccentBlack),
                               ),
                             ],
+                          ),
+                        ),
+                        SearchResultTag(
+                          shouldHighlight: true,
+                          child: Text(
+                            'Best Seller',
+                            style: TextStyles.kTextXsRegular
+                                .withColor(AppColors.kBrandColorAccentBlack),
                           ),
                         ),
                       ],
