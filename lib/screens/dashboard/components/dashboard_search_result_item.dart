@@ -31,24 +31,28 @@ class DashboardSearchResultItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const ClipRRect(
-              borderRadius: BorderRadius.only(
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(16),
                 bottomLeft: Radius.circular(16),
               ),
               child: Image(
-                width: 132,
+                width: MediaQuery.of(context).size.width * 0.368,
                 height: 152,
                 fit: BoxFit.fitHeight,
-                image: AssetImage('asset/images/search_result_image_0.png'),
+                image:
+                    const AssetImage('asset/images/search_result_image_0.png'),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Expanded(
+            Expanded(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
                       width: 152,
@@ -60,23 +64,49 @@ class DashboardSearchResultItem extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      color: Colors.yellow,
-                      child: Text('Saample'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SearchResultTag(
+                          child: Text(
+                            'Maja Indira',
+                            style: TextStyles.kTextXsRegular
+                                .withColor(AppColors.kBrandColorAccentBlack),
+                          ),
+                        ),
+                        Text(
+                          '\$49',
+                          style: TextStyles.kDisplaySmMedium,
+                        ),
+                      ],
                     ),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //   children: [
-                    //     SearchResultTag(
-                    //       child: Text(
-                    //         'Maja Indira',
-                    //         style: TextStyles.kTextXsRegular
-                    //             .withColor(AppColors.kBrandColorAccentBlack),
-                    //       ),
-                    //     ),
-                    //     Text('\$49'),
-                    //   ],
-                    // ),
+                    Row(
+                      children: [
+                        SearchResultTag(
+                          child: Row(
+                            children: [
+                              Text(
+                                '4.6',
+                                style: TextStyles.kTextXsBold
+                                    .withColor(AppColors.kSemanticDanger400),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 2),
+                                child: Image(
+                                  image: AssetImage(
+                                      'asset/images/icon_star_search_filled.png'),
+                                ),
+                              ),
+                              Text(
+                                '2349',
+                                style: TextStyles.kTextXsRegular.withColor(
+                                    AppColors.kBrandColorAccentBlack),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),

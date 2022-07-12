@@ -20,6 +20,14 @@ class TextStyles {
     ),
   );
 
+  static TextStyle kDisplaySmMedium = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kBrandColorAccentBlack,
+    ),
+  );
+
   static TextStyle kTextSemiBold14 = GoogleFonts.inter(
     textStyle: TextStyle(
       fontSize: 14,
@@ -81,6 +89,14 @@ class TextStyles {
     textStyle: TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.normal,
+      color: AppColors.kNeutralRegular400,
+    ),
+  );
+
+  static TextStyle kTextXsBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
       color: AppColors.kNeutralRegular400,
     ),
   );
