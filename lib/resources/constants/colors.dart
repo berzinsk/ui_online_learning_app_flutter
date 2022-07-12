@@ -10,4 +10,5 @@ class AppColors {
   static Color kNeutralRegular400 = const Color(0xff98a2b3);
   static Color kBrandColorDark = const Color(0xff5564de);
   static Color kBrandLight = const Color(0xff5ec3f4);
+  static Color kNeutralColor200 = const Color(0xffe4e7ec);
 }
