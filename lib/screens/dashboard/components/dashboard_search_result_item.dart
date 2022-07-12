@@ -15,6 +15,10 @@ class DashboardSearchResultItem extends StatelessWidget {
     required this.searchResult,
   }) : super(key: key);
 
+  String roundPrice(double price) {
+    return price.toStringAsFixed(price.truncateToDouble() == price ? 0 : 1);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -79,7 +83,7 @@ class DashboardSearchResultItem extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '\$${searchResult.price}',
+                          '\$${roundPrice(searchResult.price)}',
                           style: TextStyles.kDisplaySmMedium,
                         ),
                       ],
