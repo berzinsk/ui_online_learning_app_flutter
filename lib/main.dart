@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/dashboard/dashboard_search_results.dart';
+import 'screens/course/course_details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: DashboardSearchResults(),
+        body: CourseDetails(),
       ),
     );
   }
