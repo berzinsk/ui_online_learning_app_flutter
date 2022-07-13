@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../resources/constants/colors.dart';
 import '../../../resources/constants/text_styles.dart';
 import '../../../resources/extensions/text_style.dart';
-import './course_details_tag.dart';
+import './course_details_overview_tags.dart';
 
 class CourseDetailsOverview extends StatelessWidget {
   const CourseDetailsOverview({Key? key}) : super(key: key);
@@ -17,35 +17,9 @@ class CourseDetailsOverview extends StatelessWidget {
           style: TextStyles.kTextXsRegular
               .withColor(AppColors.kBrandColorAccentBlack),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Row(
-            children: [
-              CourseDetailsTag(
-                child: Row(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: const Image(
-                        width: 24,
-                        height: 24,
-                        image: AssetImage(
-                            'asset/images/normal_karlis_berzins.jpeg'),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Text(
-                        'Karlis Berzins',
-                        style: TextStyles.kTextXsRegular
-                            .withColor(AppColors.kBrandColorPrimary),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 16),
+          child: CourseDetailsOverviewTags(),
         ),
       ],
     );
