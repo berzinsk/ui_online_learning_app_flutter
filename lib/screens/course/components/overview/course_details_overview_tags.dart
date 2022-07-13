@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../resources/constants/colors.dart';
-import '../../../resources/constants/text_styles.dart';
-import '../../../resources/extensions/text_style.dart';
-import './course_details_tag.dart';
+import '../../../../resources/constants/colors.dart';
+import '../../../../resources/constants/text_styles.dart';
+import '../../../../resources/extensions/text_style.dart';
+import 'course_details_tag.dart';
 
 class CourseDetailsOverviewTags extends StatelessWidget {
   const CourseDetailsOverviewTags({Key? key}) : super(key: key);

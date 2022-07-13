@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../resources/constants/colors.dart';
+import '../../../../resources/constants/colors.dart';
 
 class CourseDetailsTag extends StatelessWidget {
   final Widget child;
