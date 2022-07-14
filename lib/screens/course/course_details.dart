@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './components/course_detail_tab_button.dart';
-import 'components/overview/course_details_overview.dart';
+import 'components/material/course_details_material.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({
@@ -37,7 +37,7 @@ class CourseDetails extends StatelessWidget {
                   ],
                 ),
               ),
-              const CourseDetailsOverview(),
+              const CourseDetailsMaterial(),
             ],
           ),
         ),
