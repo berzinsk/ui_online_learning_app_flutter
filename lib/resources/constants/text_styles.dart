@@ -141,6 +141,14 @@ class TextStyles {
     ),
   );
 
+  static TextStyle kTextSmBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.bold,
+      color: AppColors.kBrandColorPrimary,
+    ),
+  );
+
   static TextStyle kTextBold18 = GoogleFonts.inter(
     textStyle: TextStyle(
       fontSize: 18,

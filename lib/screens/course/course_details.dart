@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './components/course_detail_tab_button.dart';
-import 'components/material/course_details_material.dart';
+import 'components/review/course_details_review.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({
@@ -29,15 +29,15 @@ class CourseDetails extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
                     CourseDetailTabButton(title: 'Overview'),
+                    CourseDetailTabButton(title: 'Material'),
                     CourseDetailTabButton(
-                      title: 'Material',
+                      title: 'Review',
                       isActive: true,
                     ),
-                    CourseDetailTabButton(title: 'Review'),
                   ],
                 ),
               ),
-              const CourseDetailsMaterial(),
+              const CourseDetailsReview(),
             ],
           ),
         ),
