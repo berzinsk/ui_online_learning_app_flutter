@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../resources/constants/colors.dart';
 import '../../../../resources/constants/text_styles.dart';
 import '../../../../resources/extensions/text_style.dart';
+import './course_details_review_progress.dart';
 
 class CourseDetailsReview extends StatelessWidget {
   const CourseDetailsReview({Key? key}) : super(key: key);
@@ -56,12 +57,38 @@ class CourseDetailsReview extends StatelessWidget {
           '40 customer reviews',
           style: TextStyles.kTextSmBold,
         ),
-        Column(
-          children: [
-            Row(
-              children: [],
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          child: Column(
+            children: const [
+              CourseDetailsReviewProgress(
+                stars: 5,
+                percentage: 84,
+              ),
+              CourseDetailsReviewProgress(
+                stars: 4,
+                percentage: 9,
+              ),
+              CourseDetailsReviewProgress(
+                stars: 3,
+                percentage: 4,
+              ),
+              CourseDetailsReviewProgress(
+                stars: 2,
+                percentage: 2,
+              ),
+              CourseDetailsReviewProgress(
+                stars: 1,
+                percentage: 1,
+                showBottomPadding: false,
+              ),
+            ],
+          ),
+        ),
+        Text(
+          'How do we calculate ratings?',
+          style:
+              TextStyles.kTextSmRegular.withColor(AppColors.kBrandColorPrimary),
         ),
       ],
     );
