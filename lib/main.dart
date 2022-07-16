@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/course/course_details_playback.dart';
+import 'screens/order.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: CourseDetailsPlayback(),
+        body: PurchaseCourse(),
       ),
     );
   }
