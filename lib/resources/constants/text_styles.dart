@@ -109,6 +109,14 @@ class TextStyles {
     ),
   );
 
+  static TextStyle kTextMdSemiBold = GoogleFonts.inter(
+    textStyle: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      color: AppColors.kTextColorNeutral50,
+    ),
+  );
+
   static TextStyle kTextMdBold = GoogleFonts.inter(
     textStyle: TextStyle(
       fontSize: 16,
