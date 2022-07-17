@@ -4,6 +4,7 @@ import '../resources/constants/colors.dart';
 import '../resources/constants/text_styles.dart';
 import '../resources/extensions/text_style.dart';
 import './dashboard/components/search_result_tag.dart';
+import '../components/primary_button.dart';
 
 class PurchaseCourse extends StatelessWidget {
   const PurchaseCourse({Key? key}) : super(key: key);
@@ -86,6 +87,52 @@ class PurchaseCourse extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: Container(
+                height: 1,
+                color: AppColors.kNeutralRegular400,
+              ),
+            ),
+            Text(
+              'Have a coupon?',
+              style: TextStyles.kTextXlSemiBold,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16, bottom: 32),
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: TextField(
+                        style: TextStyles.kTextSmRegular,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(16),
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: AppColors.kBrandColorAccentBlack,
+                            ),
+                          ),
+                          hintText: 'Enter a coupon',
+                          hintStyle: TextStyles.kTextSmRegular
+                              .withColor(AppColors.kNeutralRegular400),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: PrimaryButton(
+                      title: 'Apply',
+                      onClick: () {},
                     ),
                   ),
                 ],
