@@ -144,9 +144,38 @@ class PurchaseCourse extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 32),
-              child: Text(
-                'Summary',
-                style: TextStyles.kTextXlSemiBold,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Summary',
+                    style: TextStyles.kTextXlSemiBold,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: AppColors.kSemanticSuccess100,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Coupon Applied',
+                          style: TextStyles.kTextSmRegular,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8),
+                          child: Image(
+                            image: AssetImage(
+                                'asset/images/icon_checkbox_green_bg.png'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
             Row(

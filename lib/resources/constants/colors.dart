@@ -15,4 +15,5 @@ class AppColors {
   static Color kSemanticWarning200 = const Color(0xfffdf699);
   static Color kSemanticWarning500 = const Color(0xfff2da04);
   static Color kBrandColorSecondary = const Color(0xffdbe2ef);
+  static Color kSemanticSuccess100 = const Color(0xffe2fbd8);
 }
