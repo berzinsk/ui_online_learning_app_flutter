@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/payment_details.dart';
+import 'screens/payment_details/payment_details.dart';
 
 void main() {
   runApp(const MyApp());
