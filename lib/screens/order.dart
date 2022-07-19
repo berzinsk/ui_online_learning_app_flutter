@@ -137,7 +137,77 @@ class PurchaseCourse extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            Container(
+              height: 1,
+              color: AppColors.kNeutralRegular400,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 32),
+              child: Text(
+                'Summary',
+                style: TextStyles.kTextXlSemiBold,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Original Price :',
+                  style: TextStyles.kTextSmMedium
+                      .withColor(AppColors.kBrandColorAccentBlack),
+                ),
+                Text(
+                  '\$49',
+                  style: TextStyles.kTextSmMedium
+                      .withColor(AppColors.kBrandColorAccentBlack),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Discount :',
+                    style: TextStyles.kTextSmMedium
+                        .withColor(AppColors.kBrandColorAccentBlack),
+                  ),
+                  Text(
+                    '-',
+                    style: TextStyles.kTextSmMedium
+                        .withColor(AppColors.kBrandColorAccentBlack),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 1,
+              color: AppColors.kNeutralRegular400,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Total :',
+                    style: TextStyles.kTextSmMedium
+                        .withColor(AppColors.kBrandColorAccentBlack),
+                  ),
+                  Text(
+                    '\$49',
+                    style: TextStyles.kTextSmMedium
+                        .withColor(AppColors.kBrandColorAccentBlack),
+                  ),
+                ],
+              ),
+            ),
+            PrimaryButton(
+              title: 'Proceed',
+              onClick: () {},
+            ),
           ],
         ),
       ),
