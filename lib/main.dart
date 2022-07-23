@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/payment_details/payment_details.dart';
+import 'screens/order_placed.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: PaymentDetails(),
+        body: OrderPlaced(),
       ),
     );
   }
