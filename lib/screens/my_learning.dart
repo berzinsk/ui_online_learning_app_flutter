@@ -43,6 +43,22 @@ class MyLearning extends StatelessWidget {
               ),
             ),
             const MyLearningItem(),
+            TextButton(
+              style: ButtonStyle(
+                overlayColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                    return Colors.transparent;
+                  },
+                ),
+                splashFactory: NoSplash.splashFactory,
+              ),
+              onPressed: () {},
+              child: Text(
+                'Start Course',
+                style: TextStyles.kTextSmSemiBold
+                    .withColor(AppColors.kBrandColorPrimary),
+              ),
+            ),
           ],
         ),
       ),
