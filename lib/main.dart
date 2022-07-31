@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/my_learning.dart';
+import 'screens/account.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: MyLearning(),
+        body: Account(),
       ),
     );
   }
