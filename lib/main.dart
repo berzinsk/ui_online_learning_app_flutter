@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/leaderboard.dart';
+import 'screens/leaderboard_details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: Leaderboard(),
+      home: const Scaffold(
+        body: LeaderboardDetails(),
       ),
     );
   }
