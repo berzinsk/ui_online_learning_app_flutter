@@ -5,8 +5,17 @@ import '../../resources/constants/text_styles.dart';
 import '../../resources/extensions/text_style.dart';
 
 class LeaderboardRowItem extends StatelessWidget {
+  final String imageName;
+  final String username;
+  final int score;
+  final int rank;
+
   const LeaderboardRowItem({
     Key? key,
+    required this.imageName,
+    required this.username,
+    required this.score,
+    required this.rank,
   }) : super(key: key);
 
   @override
@@ -35,13 +44,13 @@ class LeaderboardRowItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '@berzinsk',
+                        '@$username',
                         style: TextStyles.kTextXsRegular
                             .withColor(AppColors.kBrandColorAccentBlack),
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        '5002',
+                        '$score',
                         style: TextStyles.kTextXsBold
                             .withColor(AppColors.kBrandColorAccentBlack),
                       )
@@ -53,7 +62,7 @@ class LeaderboardRowItem extends StatelessWidget {
                     children: [
                       Image.asset('asset/images/icon_arrow_up_thin.png'),
                       Text(
-                        '4',
+                        '$rank',
                         style: TextStyles.kTextSemiBold18,
                       ),
                     ],
@@ -70,10 +79,9 @@ class LeaderboardRowItem extends StatelessWidget {
                 width: 2,
                 color: AppColors.kBrandColorPrimary,
               )),
-          child: const CircleAvatar(
+          child: CircleAvatar(
             radius: 38,
-            backgroundImage:
-                AssetImage('asset/images/normal_karlis_berzins.jpeg'),
+            backgroundImage: AssetImage('asset/images/$imageName.jpeg'),
           ),
         ),
       ],
