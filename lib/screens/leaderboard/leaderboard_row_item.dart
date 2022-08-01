@@ -81,7 +81,7 @@ class LeaderboardRowItem extends StatelessWidget {
               )),
           child: CircleAvatar(
             radius: 38,
-            backgroundImage: AssetImage('asset/images/$imageName.jpeg'),
+            backgroundImage: AssetImage('asset/images/$imageName'),
           ),
         ),
       ],

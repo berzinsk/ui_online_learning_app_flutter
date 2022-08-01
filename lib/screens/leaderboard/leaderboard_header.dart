@@ -4,9 +4,15 @@ import '../../resources/constants/colors.dart';
 import '../../resources/constants/text_styles.dart';
 import '../../resources/extensions/text_style.dart';
 import './leaderboard_item.dart';
+import '../../model/leaderboard_data_item.dart';
 
 class LeaderboardHeader extends StatelessWidget {
-  const LeaderboardHeader({Key? key}) : super(key: key);
+  final List<LeaderboardDataItem> standings;
+
+  const LeaderboardHeader({
+    Key? key,
+    required this.standings,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,30 +80,21 @@ class LeaderboardHeader extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
-                children: const [
+                children: [
                   Padding(
-                    padding: EdgeInsets.only(bottom: 4),
+                    padding: const EdgeInsets.only(bottom: 4),
                     child: LeaderboardItem(
-                      rank: 2,
-                      imageName: 'normal_karlis_berzins.jpeg',
-                      username: 'berzinsk',
-                      score: 5002,
+                      item: standings[1],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(bottom: 48),
+                    padding: const EdgeInsets.only(bottom: 48),
                     child: LeaderboardItem(
-                      rank: 1,
-                      imageName: 'normal_karlis_berzins.jpeg',
-                      username: 'berzinsk',
-                      score: 5300,
+                      item: standings[0],
                     ),
                   ),
                   LeaderboardItem(
-                    rank: 3,
-                    imageName: 'normal_karlis_berzins.jpeg',
-                    username: 'berzinsk',
-                    score: 4879,
+                    item: standings[2],
                   ),
                 ],
               ),
